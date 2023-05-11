@@ -1,0 +1,16 @@
+.likeDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    /* padding: 1em; */
+
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+
+    margin-left: 1em;
+
+  }
+  

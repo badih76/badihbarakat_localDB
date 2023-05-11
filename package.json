@@ -5,18 +5,29 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.4",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "mysql2": "^3.2.3",
     "next": "13.3.0",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.3",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
+    "react-toastify": "^9.1.2",
+    "redux": "^4.2.1",
     "typescript": "5.0.4"
   }
 }

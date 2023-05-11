@@ -1,0 +1,57 @@
+.skillRowEven {
+    width: 100%;
+    min-height: 2em;
+    line-height: 2em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    padding: 5px;
+
+    background-color: rgb(0, 167, 167);
+}
+
+.skillRowOdd {
+    width: 100%;
+    min-height: 2em;
+    line-height: 2em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    padding: 5px;
+
+    /* background-color: rgb(176, 239, 255); */
+}
+
+.textSection {
+    /* margin-Top: 2em; */
+    margin-bottom: 2em;
+    font-Size: 2rem;
+    text-Align: justify;
+    font-Family: 'Inconsolata', monospace;
+    font-size: 1.5rem;
+  }
+
+  .mediumFollowButton {
+    background-color: rgb(0, 226, 0);
+    border-radius: 15px;
+  }
+
+  .btn .btn-success:hover {
+    background-color: rgb(0, 156, 0);
+  }
+
+@media (max-width: 1200px) {
+    .skillRowEven {
+        font-size: 0.75em;
+    }
+
+    .skillRowOdd {
+        font-size: 0.75em;
+    }
+}

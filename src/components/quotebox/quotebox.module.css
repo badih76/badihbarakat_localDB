@@ -1,0 +1,41 @@
+.quoteContainer {
+    background-image: linear-gradient(to bottom right, rgb(0, 179, 179) 40%, white 50%, rgb(0, 179, 179) 60%); 
+    border-Radius: 1rem;
+    width: 90%;
+    margin: 2rem;
+    margin-Top: 5rem;
+    opacity: 0.7;
+}
+
+.openingQuote {
+    text-Align: left;
+    float: left; 
+    margin-Right: 1rem;
+    margin-Top: 1rem;
+    color: rgb(255, 223, 42);
+    text-Shadow: 5px 5px 2px gray;
+}
+
+.quoteText {
+    font-Size: 2rem;
+    font-Family: 'Orbitron', sans-serif;
+    font-Style: italic
+}
+
+.quoteBy {
+    text-Align: right; 
+    font-Family: 'Ysabeau', sans-serif;
+    font-Weight: bold
+}
+
+@media (max-width: 1200px) {
+    .quoteText {
+        font-Size: 1rem;
+        font-Family: 'Orbitron', sans-serif;
+        font-Style: italic
+    }
+
+    .quoteContainer {
+        margin: auto;
+    }
+}

@@ -1,0 +1,54 @@
+[
+    { 
+        "skill": "JavaScript / TypeScript", 
+        "icon": ""
+    },
+    {
+        "skill": "React.js",
+        "icon": ""
+    },
+    {
+        "skill": "Next.js",
+        "icon": ""
+    },
+    {
+        "skill": "Node.js",
+        "icon": ""
+    },
+    {
+        "skill": "MS-SQL, MySQL, NoSQL",
+        "icon": ""
+    },
+    {
+        "skill": "RESTful API",
+        "icon": ""
+    },
+    {
+        "skill": "Project Management",
+        "icon": ""
+    },
+    {
+        "skill": "Team Leadership",
+        "icon": ""
+    },
+    {
+        "skill": "Agile SW Development",
+        "icon": ""
+    },
+    {
+        "skill": "HTML5",
+        "icon": ""
+    },
+    {
+        "skill": "CSS3",
+        "icon": ""
+    },
+    {
+        "skill": "Git, Github",
+        "icon": ""
+    },    
+    {
+        "skill": "Automated Testing (Jest)",
+        "icon": ""
+    }
+]

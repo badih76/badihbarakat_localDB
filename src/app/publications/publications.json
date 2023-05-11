@@ -1,0 +1,42 @@
+[
+    {
+        "pubSite": "medium.com",
+        "pubURL": "https://badih76.medium.com/client-device-detection-in-next-js-13-df35c4b0255c",
+        "pubTitle": "Client Device Detection in Next.js 13"
+    },
+    {
+        "pubSite": "medium.com",
+        "pubURL": "https://medium.com/@badih76/typescript-interfaces-abstract-classes-when-to-use-which-3c2e02e631d9",
+        "pubTitle": "TypeScript Interfaces & Abstract Classes. When to use which."
+    },
+    {
+        "pubSite": "medium.com",
+        "pubURL": "https://badih76.medium.com/the-awesome-javascript-combination-promise-async-await-434bbff4643d",
+        "pubTitle": "The awesome Javascript combination, Promise, async / await"
+    },
+    {
+        "pubSite": "medium.com",
+        "pubURL": "https://badih76.medium.com/use-emoji-in-html-php-javascript-and-css-12ba04112f4b",
+        "pubTitle": "Use Emoji in HTML, PHP, JavaScript and CSS"
+    },
+    {
+        "pubSite": "medium.com",
+        "pubURL": "https://badih76.medium.com/php-interfaces-abstract-classes-when-to-use-which-fe652b0ec2a8",
+        "pubTitle": "PHP Interfaces & Abstract Classes. When to use which."
+    },
+    {
+        "pubSite": "medium.com",
+        "pubURL": "https://badih76.medium.com/closure-memorization-and-the-fibonacci-sequence-8ae8a241dba7",
+        "pubTitle": "Closure, Memorization and the Fibonacci Sequence"
+    },
+    {
+        "pubSite": "medium.com",
+        "pubURL": "https://badih76.medium.com/data-validation-made-easy-with-joi-413b5911a09c",
+        "pubTitle": "Data validation made easy with joi"
+    },
+    {
+        "pubSite": "medium.com",
+        "pubURL": "https://badih76.medium.com/simple-reference-to-install-node-js-b915cfd94318",
+        "pubTitle": "Simple reference to install Node.js"
+    }
+]

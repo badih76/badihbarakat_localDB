@@ -1,0 +1,82 @@
+section .services {
+    text-align: center;
+    transform: translatez(0);
+  }
+  
+  section .services li {
+    width: 40px;
+    height: 60px;
+    display: inline-block;
+    margin: 5px;
+    list-style: none;
+  }
+
+  section .services li div {
+    width: 40px;
+    height: 40px;
+    color: teal;
+    font-size: 1em;
+    text-align: center;
+    line-height: 40px;
+    background-color: #fff;
+    transition: all 0.5s ease;
+  }
+  
+  section .services li a {
+    color: teal;
+  }
+  
+/*   
+  section .services li div:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+    background-color: #fff;
+    color: teal;
+  } */
+
+  .facebook:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+    background-color: #1877f2;
+    color: #fff;
+  }
+
+  .twitter:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+    background-color: #1da1f2;
+    color: #fff;
+  }
+
+  .youtube:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+    background-color: #ff0000;
+    color: #fff;
+  }
+
+  .linkedin:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+    background-color: #0a66c2;
+    color: #fff;
+  }
+
+  .instagram:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+    background-color: #c32aa3;
+    color: #fff;
+  }
+
+  .github:hover {
+    transform: rotate(360deg);
+    border-radius: 100px;
+    background-color: #000;
+    color: #fff;
+  }
+
+  section .services li div:hover a {
+    color: #fff;
+  }
+  

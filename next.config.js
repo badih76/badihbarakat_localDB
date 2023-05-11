@@ -2,7 +2,17 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    serverComponentsExternalPackages: ["mysql2"]
   },
+  env: {
+    host: 'containers-us-west-53.railway.app', 
+    port: 7857, 
+    user: 'root',
+    password: 'D2JeDWNtMrfj1BbO8RfQ', 
+    database: 'railway', 
+    DEV_HOST_URL: 'http://localhost:3000',             //'http://192.168.1.12:3000',
+    PROD_HOST_URL: 'https://'
+  }
 }
 
 module.exports = nextConfig

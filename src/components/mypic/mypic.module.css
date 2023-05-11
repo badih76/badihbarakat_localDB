@@ -1,0 +1,38 @@
+.mask {
+    -webkit-mask-image: url(../../../public/mask.png);
+    mask-image: url(../../../public/mask.png);
+    -webkit-mask-size: 300px;
+    mask-size: 300px;
+    mask-position: 1vw 0;
+    -webkit-mask-position: 1vw 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    
+    width: 300px;
+    margin-right: 3vw;
+    /* float: left; */
+    /* border: solid 1px red; */
+}
+
+.myPic {
+    width: 350px; 
+    height: 350px; 
+    border-radius: 50%; 
+    overflow: hidden;
+    /* background-color: rgb(9, 196, 155); */
+    background-color: lightgray;
+    
+}
+
+/* .fixedImage {
+    background-image: url(../../../public/me2.jpg);
+    background-attachment: fixed;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-color: white;
+
+    width: 300px;
+    height: 430px;
+    border: solid 1px red;
+} */
