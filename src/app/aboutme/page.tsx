@@ -10,8 +10,6 @@ import { setStatistics } from '@/redux/store/actions';
 import Styles from './aboutme.module.css';
 import Styles2 from '../page.module.css';
 
-import "bootstrap-icons/font/bootstrap-icons.css";
-
 import skills from './skills.json';
 import { IPageStats } from '@/redux/store/reducer';
 import { GetHostURL } from '@/sharedCode/common'

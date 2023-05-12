@@ -1,4 +1,4 @@
-import Styles from "@/components/quotebox/quotebox.module.css";
+import Styles from "./quotebox.module.css";
 
 interface IProps {
     quote: string,

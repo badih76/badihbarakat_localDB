@@ -8,7 +8,7 @@ import MyPic from '@/components/mypic';
 // import bg3 from '@/../public/background3.jpg';
 
 import Styles from './page.module.css';
-import './globals.css';
+// import './globals.css';
 
 import store from '@/redux/store';
 import { setStatistics } from '@/redux/store/actions';
@@ -34,8 +34,6 @@ const Home = async () => {
       /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
     );
 
-  console.log('isMobileView: ', isMobileView);
-
   let pageStats: IPageStats[] = store.getState().pageStats;
   let newVisit = 0;
   const hostURL = GetHostURL();
@@ -46,8 +44,6 @@ const Home = async () => {
   });
 
   if(found == -1) newVisit = 1;
-
-  console.log('******** Host URL: ', hostURL);
 
   const req = await fetch(`${hostURL}/api/statistics/visits?pageName=${page}&newVisit=${newVisit}`,
   {

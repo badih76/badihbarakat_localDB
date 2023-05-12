@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './globals.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
+import 'react-toastify/dist/ReactToastify.css';
+
+import './globals.css';
 import Styles from './page.module.css';
 
 import BSNavBar from '@/components/bsnavbar';

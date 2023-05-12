@@ -1,5 +1,5 @@
 import Styles from './socialmedia.module.css';
-import "bootstrap-icons/font/bootstrap-icons.css";
+// import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 

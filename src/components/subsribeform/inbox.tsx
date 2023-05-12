@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import { GetHostURL } from '@/sharedCode/common'
 
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 // import './subscribeform.module.css';
 
 
