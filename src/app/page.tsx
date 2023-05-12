@@ -47,6 +47,7 @@ const Home = async () => {
 
   if(found == -1) newVisit = 1;
 
+  console.log('******** Host URL: ', hostURL);
 
   const req = await fetch(`${hostURL}/api/statistics/visits?pageName=${page}&newVisit=${newVisit}`,
   {
