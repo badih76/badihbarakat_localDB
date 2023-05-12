@@ -100,13 +100,13 @@ const Home = async () => {
       </div> */}
       <div className={Styles.textSection}>
         <p>
-          Hi! My name is Badih Barakat and I'm a Full Stack Developer based in Sydney, Australia. I have around 20 years of software development
+          Hi! My name is Badih Barakat and I&apos;m a Full Stack Developer based in Sydney, Australia. I have around 20 years of software development
           in multiple programming languages and on multiple platforms, starting with Microsoft Visual Basic and going through PHP and C#.NET, and 
-          mastered experience in JavaScript, TypeScript and React.js. Through-out the years, I've developed and maintained various 
+          mastered experience in JavaScript, TypeScript and React.js. Through-out the years, I&apos;ve developed and maintained various 
           applications in these languages for multiple companies.
         </p>
         <p>
-          I'm in contious process of aquiring knowledge and skill required and recommended in my domain, and always eager for keeping myself
+          I&apos;m in contious process of aquiring knowledge and skill required and recommended in my domain, and always eager for keeping myself
           up-todate with the latest trends and to improve my performance.
         </p>
       </div>

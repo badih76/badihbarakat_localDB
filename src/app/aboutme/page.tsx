@@ -92,7 +92,7 @@ const AboutMe = async () => {
                     upgrade of my acquired skills.
                 </p>
                 <p>
-                    I'm a Full Stack Developer, and I've started my career in Software Development in the year 2000 
+                    I&apos;m a Full Stack Developer, and I&apos;ve started my career in Software Development in the year 2000 
                     and been advancing and improving my skills since then to keep up with the rapidly changing world 
                     of software development and programming.  
                 </p>
