@@ -41,7 +41,7 @@ const SubscribeForm = () => {
                 results = [];     
                 setMyErr(apiRes.error!);
                 
-                toast.warn('🚀 Subscription Failed. '+apiRes.error
+                toast.warn('Subscription Failed. '+apiRes.error
                 , {
                     position: "top-right",
                     autoClose: 5000,
@@ -73,6 +73,18 @@ const SubscribeForm = () => {
             }
         } catch(err: any) {
             setMyErr(err);
+
+            toast.warn('Like action failed! Error: ' + err
+            , {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });     
         }
     }
 
