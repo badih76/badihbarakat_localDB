@@ -23,6 +23,8 @@ export async function GET(request: NextRequest) {
     let pageName = request.nextUrl.searchParams.get('pageName');
     let newVisit = request.nextUrl.searchParams.get('newVisit');
 
+    console.log('params: ', { pageName, newVisit });
+    
     try {
         // connect to database
         const connection = await mysql.createConnection(connectionParams);
@@ -50,6 +52,7 @@ export async function GET(request: NextRequest) {
             
         const [ results ] = await connection.execute(get_exp_query, values);
 
+        console.log('results: ', results);
         response.data = results;        
 
         connection.end();
