@@ -33,7 +33,7 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                 const apiReq = await fetch(apiURL,
                 {
                   'method': 'post',
-                  'cache': 'no-cache',
+                  'cache': 'no-store',
                   // 'mode': 'no-cors',
                   // 'headers': {
                   //   'Access-Control-Allow-Origin': hostURL!,
