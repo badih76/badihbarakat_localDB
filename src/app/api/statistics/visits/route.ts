@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
         // console.log("changedRows: ", (results as mysql.ResultSetHeader).changedRows);
 
 
-        get_exp_query = "SELECT * FROM statistics WHERE pagename = ?";
+        get_exp_query = "SELECT * FROM statistics WHERE pagename = '" + pageName + "'";
             
         const [ results ] = await connection.execute(get_exp_query, values);
 
