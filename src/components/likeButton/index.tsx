@@ -29,25 +29,41 @@ const LikeButton = ({ likes, pageName }: IProps) => {
               console.log(`${hostURL}/api/statistics/likes`);
               const apiURL = `${hostURL}/api/statistics/likes`;
 
-              const apiReq = await fetch(apiURL,
-              {
-                'method': 'post',
-                'cache': 'no-cache',
-                // 'mode': 'no-cors',
-                // 'headers': {
-                //   'Access-Control-Allow-Origin': hostURL!,
-                //   'Access-Control-Allow-Credentials': 'true'
-                // },
-                'body': JSON.stringify({ pageName })
-              });
+              try{
+                const apiReq = await fetch(apiURL,
+                {
+                  'method': 'post',
+                  'cache': 'no-cache',
+                  // 'mode': 'no-cors',
+                  // 'headers': {
+                  //   'Access-Control-Allow-Origin': hostURL!,
+                  //   'Access-Control-Allow-Credentials': 'true'
+                  // },
+                  'body': JSON.stringify({ pageName })
+                });
 
-              console.log('apiReq: ', apiReq);
-              apiRes = await apiReq.json();
+                console.log('apiReq: ', apiReq);
+                apiRes = await apiReq.json();
 
-              if(apiRes.error) {
-                // results = [];     
-                toast.warn('😳 Like action failed! '+apiRes.error
-                , {
+                if(apiRes.error) {
+                  // results = [];     
+                  
+                  toast.warn('😳 Like action failed! '+apiRes.error
+                  , {
+                      position: "top-right",
+                      autoClose: 5000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      });        
+                      
+                } else {               
+                  console.log('Successful Like');
+
+                  toast('👍 Liked Successfully.', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -56,23 +72,12 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                     draggable: true,
                     progress: undefined,
                     theme: "light",
-                    });        
-                    
-              } else {               
-                console.log('Successful Like');
+                    });
 
-                toast('👍 Liked Successfully.', {
-                  position: "top-right",
-                  autoClose: 5000,
-                  hideProgressBar: false,
-                  closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
-                  progress: undefined,
-                  theme: "light",
-                  });
-
-                  setMoreLikes(moreLikes + 1);
+                    setMoreLikes(moreLikes + 1);
+                }
+              } catch(err) {
+                alert(err);
               }
             }
           }
