@@ -6,13 +6,16 @@ import { GetHostURL } from '@/sharedCode/common';
 import Styles from './likeButton.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandsClapping } from '@fortawesome/free-solid-svg-icons';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { IAPIResponse } from "@/interfaces/api.types";
 
 interface IProps {
   likes: number,
   pageName: string
 }
+
+
+
 
 const LikeButton = ({ likes, pageName }: IProps) => {
     const [ moreLikes, setMoreLikes ] = useState(likes);
@@ -29,22 +32,22 @@ const LikeButton = ({ likes, pageName }: IProps) => {
               console.log(`${hostURL}/api/statistics/likes`);
               const apiURL = `${hostURL}/api/statistics/likes`;
 
-              const apiReq = await fetch(apiURL,
-              {
-                'method': 'post',
-                'cache': 'no-store',
-                // 'mode': 'no-cors',
-                // 'headers': {
-                //   'Access-Control-Allow-Origin': hostURL!,
-                //   'Access-Control-Allow-Credentials': 'true'
-                // },
-                'body': JSON.stringify({ pageName })
-              });
-
-              console.log('apiReq: ', apiReq);
-              apiRes = await apiReq.json();
-
               try{
+                const apiReq = await fetch(apiURL,
+                {
+                  'method': 'post',
+                  'cache': 'no-store',
+                  // 'mode': 'no-cors',
+                  // 'headers': {
+                  //   'Access-Control-Allow-Origin': hostURL!,
+                  //   'Access-Control-Allow-Credentials': 'true'
+                  // },
+                  'body': JSON.stringify({ pageName })
+                });
+
+                console.log('apiReq: ', apiReq);
+                apiRes = await apiReq.json();
+              
                 if(apiRes.error) {
                   // results = [];     
                   
@@ -77,7 +80,17 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                     setMoreLikes(moreLikes + 1);
                 }
               } catch(err) {
-                alert(err);
+                toast.warn('⚠ Like action failed! ' + err
+                  , {
+                      position: "top-right",
+                      autoClose: 5000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      });        
               }
             }
           }
