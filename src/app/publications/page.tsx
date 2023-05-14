@@ -23,7 +23,7 @@ const Publications = async () => {
     let pageStats: IPageStats[] = store.getState().pageStats;
     let newVisit = 0;
     const hostURL = GetHostURL();
-    const page = 'home';
+    const page = 'publications';
 
   let found = pageStats.findIndex((ps: IPageStats) => {
     return ps.pageName == 'publications';
