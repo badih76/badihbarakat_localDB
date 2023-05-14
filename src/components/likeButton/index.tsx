@@ -80,7 +80,7 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                     setMoreLikes(moreLikes + 1);
                 }
               } catch(err) {
-                toast.warn('⚠ Like action failed! ' + err
+                toast.warn('Like action failed! Error: ' + err
                   , {
                       position: "top-right",
                       autoClose: 5000,
