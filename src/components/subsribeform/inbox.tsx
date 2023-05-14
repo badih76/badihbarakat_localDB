@@ -74,7 +74,7 @@ const SubscribeForm = () => {
         } catch(err: any) {
             setMyErr(err);
 
-            toast.warn('Like action failed! Error: ' + err
+            toast.warn('Subscription action failed! Error: ' + err
             , {
                 position: "top-right",
                 autoClose: 5000,
@@ -107,6 +107,17 @@ const SubscribeForm = () => {
             .catch((err: Error) => {
                 console.log('Error:',err);
                 setMyErr(err.message + ' subscriptions count');
+                toast.warn('Error fetching subscriptions count! Error: ' + err
+                  , {
+                      position: "top-right",
+                      autoClose: 5000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      theme: "light",
+                      });     
             })
         
     }, []);
