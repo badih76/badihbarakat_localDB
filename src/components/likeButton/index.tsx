@@ -29,22 +29,22 @@ const LikeButton = ({ likes, pageName }: IProps) => {
               console.log(`${hostURL}/api/statistics/likes`);
               const apiURL = `${hostURL}/api/statistics/likes`;
 
+              const apiReq = await fetch(apiURL,
+              {
+                'method': 'post',
+                'cache': 'no-store',
+                // 'mode': 'no-cors',
+                // 'headers': {
+                //   'Access-Control-Allow-Origin': hostURL!,
+                //   'Access-Control-Allow-Credentials': 'true'
+                // },
+                'body': JSON.stringify({ pageName })
+              });
+
+              console.log('apiReq: ', apiReq);
+              apiRes = await apiReq.json();
+
               try{
-                const apiReq = await fetch(apiURL,
-                {
-                  'method': 'post',
-                  'cache': 'no-store',
-                  // 'mode': 'no-cors',
-                  // 'headers': {
-                  //   'Access-Control-Allow-Origin': hostURL!,
-                  //   'Access-Control-Allow-Credentials': 'true'
-                  // },
-                  'body': JSON.stringify({ pageName })
-                });
-
-                console.log('apiReq: ', apiReq);
-                apiRes = await apiReq.json();
-
                 if(apiRes.error) {
                   // results = [];     
                   
