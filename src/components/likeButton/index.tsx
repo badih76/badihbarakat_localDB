@@ -61,8 +61,11 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                 });
 
                 console.log('apiReq: ', apiReq);
+                alert(apiReq);
+                
                 apiRes = await apiReq.json();
               
+
                 if(apiRes.error) {
                   // results = [];     
                   toast.dismiss(toastId.current);
