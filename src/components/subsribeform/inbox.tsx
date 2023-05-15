@@ -29,6 +29,7 @@ const SubscribeForm = () => {
                 { 
                     method: 'post', 
                     cache: 'no-store',
+                    mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ payload: { email }})
                 });
@@ -161,7 +162,7 @@ const SubscribeForm = () => {
                 {hostURL}
             </div> */}
 
-            <ToastContainer
+            {/* <ToastContainer
                 position="top-right"
                 autoClose={5000}
                 hideProgressBar={false}
@@ -173,7 +174,7 @@ const SubscribeForm = () => {
                 pauseOnHover
                 theme="light"
                 style={{fontSize: "0.75em"}}
-            />
+            /> */}
 
         </div>
     )
