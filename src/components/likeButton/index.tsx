@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { GetHostURL } from '@/sharedCode/common';
 
 import Styles from './likeButton.module.css';
@@ -21,6 +21,8 @@ const LikeButton = ({ likes, pageName }: IProps) => {
     const [ moreLikes, setMoreLikes ] = useState(likes);
 
     const hostURL = GetHostURL();
+    const toastId: any|null = useRef(null);
+
 
     return (
       <div className={Styles.likeDiv}>
@@ -29,6 +31,19 @@ const LikeButton = ({ likes, pageName }: IProps) => {
             async () => {
               let apiRes: IAPIResponse;
 
+
+              toastId.current = toast('🚀 Processing your like'
+              , {
+                  position: "top-right",
+                  autoClose: 5000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                  });
+                  
               console.log(`${hostURL}/api/statistics/likes`);
               const apiURL = `${hostURL}/api/statistics/likes`;
 
@@ -50,7 +65,8 @@ const LikeButton = ({ likes, pageName }: IProps) => {
               
                 if(apiRes.error) {
                   // results = [];     
-                  
+                  toast.dismiss(toastId.current);
+
                   toast.warn('😳 Like action failed! '+apiRes.error
                   , {
                       position: "top-right",
@@ -66,6 +82,8 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                 } else {               
                   console.log('Successful Like');
 
+                  toast.dismiss(toastId.current);
+
                   toast('👍 Liked Successfully.', {
                     position: "top-right",
                     autoClose: 5000,
@@ -80,6 +98,8 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                     setMoreLikes(moreLikes + 1);
                 }
               } catch(err) {
+                toast.dismiss(toastId.current);
+
                 toast.warn('Like action failed! Error: ' + err
                   , {
                       position: "top-right",
