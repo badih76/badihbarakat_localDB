@@ -52,7 +52,7 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                 {
                   'method': 'post',
                   'cache': 'no-store',
-                  'mode': 'no-cors',
+                  // 'mode': 'no-cors',
                   // 'headers': {
                   //   'Access-Control-Allow-Origin': hostURL!,
                   //   'Access-Control-Allow-Credentials': 'true'
@@ -64,7 +64,7 @@ const LikeButton = ({ likes, pageName }: IProps) => {
 
                 apiRes = await apiReq.json();
                 console.log('apiRes: ', apiRes);
-                
+
                 alert('Testing 1');
 
                 if(apiRes.error) {

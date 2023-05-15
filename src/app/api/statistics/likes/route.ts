@@ -103,7 +103,14 @@ export async function POST(request: NextRequest) {
         console.log('*** ', results);
 
         // return the results as a JSON API response
-        return NextResponse.json(response);
+        return NextResponse.json(response, {
+            headers: {
+                'content-type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+            }
+        });
     } catch (err) {
         console.log('ERROR: API - ', (err as Error).message);
         
