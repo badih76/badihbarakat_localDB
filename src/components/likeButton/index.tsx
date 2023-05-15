@@ -60,18 +60,12 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                   'body': JSON.stringify({ pageName })
                 });
 
-                // console.log('apiReq: ', apiReq);                
-
                 apiRes = await apiReq.json();
                 console.log('apiRes: ', apiRes);
-
-                alert('Testing 1');
 
                 if(apiRes.error) {
                   // results = [];     
                   toast.dismiss(toastId.current);
-
-                  alert('Testing 2');
 
                   toast.warn('😳 Like action failed! '+apiRes.error + ' ' + hostURL
                   , {
@@ -87,7 +81,6 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                       
                 } else {               
                   console.log('Successful Like');
-                  alert('Testing 3');
                   toast.dismiss(toastId.current);
 
                   toast('👍 Liked Successfully.', {
