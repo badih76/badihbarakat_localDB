@@ -67,7 +67,7 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                   // results = [];     
                   toast.dismiss(toastId.current);
 
-                  toast.warn('😳 Like action failed! '+apiRes.error
+                  toast.warn('😳 Like action failed! '+apiRes.error + ' ' + hostURL
                   , {
                       position: "top-right",
                       autoClose: 5000,
@@ -100,7 +100,7 @@ const LikeButton = ({ likes, pageName }: IProps) => {
               } catch(err) {
                 toast.dismiss(toastId.current);
 
-                toast.warn('Like action failed! Error: ' + err
+                toast.warn('Like action failed! Error: ' + err + ' ' + hostURL
                   , {
                       position: "top-right",
                       autoClose: 5000,
