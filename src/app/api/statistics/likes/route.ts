@@ -111,7 +111,14 @@ export async function POST(request: NextRequest) {
         
         response.returnedStatus = 200;
         response.data = [];
-        return NextResponse.json(response, { status: 200 });
+        
+        return NextResponse.json(response, { status: 200, 
+            headers: {
+                'content-type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+            }});
     }
 
 
