@@ -96,7 +96,8 @@ const SubscribeForm = () => {
         fetch(`${hostURL}/api/subscribe`, 
             { 
                 method: 'get', 
-                cache: 'no-store'                
+                cache: 'no-store',
+                mode: 'no-cors'          
             })
             .then((apiReq: any) => {
                 return apiReq.json();
