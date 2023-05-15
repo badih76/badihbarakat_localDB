@@ -18,57 +18,57 @@ let response: IAPIResponse = {
     data: null
 }
 
-// export async function GET(request: NextRequest) {
+export async function GET(request: NextRequest) {
 
-//     let pageName = request.nextUrl.searchParams.get('pageName');
-//     console.log('pagename = ', pageName);
-//     try {
-//         // connect to database
-//         const connection = await mysql.createConnection(connectionParams);
+    let pageName = request.nextUrl.searchParams.get('pageName');
+    console.log('pagename = ', pageName);
+    try {
+        // connect to database
+        const connection = await mysql.createConnection(connectionParams);
 
         
-//         // create a query to fetch all expenses
-//         let get_exp_query = "";
-//         let values: any[] = [];
+        // create a query to fetch all expenses
+        // let get_exp_query = "";
+        // let values: any[] = [];
         
-//         get_exp_query = "UPDATE statistics SET visits =  visits + 1 WHERE pagename = ?";
-//         values = [ pageName ];
+        // get_exp_query = "UPDATE statistics SET visits =  visits + 1 WHERE pagename = ?";
+        // values = [ pageName ];
              
-//         // exec the query and retrieve the results
-//         const [ results ] = await connection.execute(get_exp_query, values);
+        // // exec the query and retrieve the results
+        // const [ results ] = await connection.execute(get_exp_query, values);
         
-//         console.log("changedRows: ", (results as mysql.ResultSetHeader).changedRows);
+        // console.log("changedRows: ", (results as mysql.ResultSetHeader).changedRows);
 
-//         if((results as mysql.ResultSetHeader).changedRows == 1) {
-//             get_exp_query = "SELECT * FROM statistics WHERE pagename = ?";
+        // if((results as mysql.ResultSetHeader).changedRows == 1) {
+        //     get_exp_query = "SELECT * FROM statistics WHERE pagename = ?";
             
-//             const [ results2 ] = await connection.execute(get_exp_query, values);
-//             console.log('Results: ', results2);
+        //     const [ results2 ] = await connection.execute(get_exp_query, values);
+        //     console.log('Results: ', results2);
 
-//             response.data = results2;
+        //     response.data = results2;
 
-//         } else {
-//             response.error = "Something went wrong! Can't track the visit.";
-//             response.data = {};
-//         }
+        // } else {
+        //     response.error = "Something went wrong! Can't track the visit.";
+        //     response.data = {};
+        // }
         
 
-//         connection.end();
+        // connection.end();
 
-//         // response.data = results;
+        // response.data = results;
 
-//         // return the results as a JSON API response
-//         return NextResponse.json(response);
-//     } catch (err) {
-//         console.log('ERROR: API - ', (err as Error).message);
+        // return the results as a JSON API response
+        return NextResponse.json({ value: 'Test Value' });
+    } catch (err) {
+        console.log('ERROR: API - ', (err as Error).message);
         
-//         response.error = (err as Error).message;
+        response.error = (err as Error).message;
         
-//         response.returnedStatus = 200;
-//         response.data = [];
-//         return NextResponse.json(response, { status: 200 });
-//     }
-// }
+        response.returnedStatus = 200;
+        response.data = [];
+        return NextResponse.json(response, { status: 200 });
+    }
+}
 
 
 export async function POST(request: NextRequest) {
