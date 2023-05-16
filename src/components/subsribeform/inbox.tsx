@@ -96,7 +96,6 @@ const SubscribeForm = () => {
             { 
                 method: 'get', 
                 cache: 'no-store',
-                mode: 'no-cors'          
             })
             .then((apiReq: any) => {
                 return apiReq.json();
