@@ -29,7 +29,6 @@ const SubscribeForm = () => {
                 { 
                     method: 'post', 
                     cache: 'no-store',
-                    mode: 'no-cors',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ payload: { email }})
                 });

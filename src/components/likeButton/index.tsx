@@ -52,7 +52,6 @@ const LikeButton = ({ likes, pageName }: IProps) => {
                 {
                   'method': 'post',
                   'cache': 'no-store',
-                  // 'mode': 'no-cors',
                   // 'headers': {
                   //   'Access-Control-Allow-Origin': hostURL!,
                   //   'Access-Control-Allow-Credentials': 'true'
