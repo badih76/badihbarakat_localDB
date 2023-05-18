@@ -1,7 +1,7 @@
 'use client'
 
 import { IAPIResponse } from '@/interfaces/api.types';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { GetHostURL } from '@/sharedCode/common'
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -12,6 +12,8 @@ const SubscribeForm = () => {
     const [email, setEmail] = useState('');
     const [subscribers, setSubscribers] = useState(0);
     const [ myErr, setMyErr ] = useState('');
+
+    const emailRef = useRef<HTMLInputElement>(null);
 
     const hostURL = GetHostURL();
 
@@ -24,13 +26,16 @@ const SubscribeForm = () => {
         let apiRes: IAPIResponse;
         let results: [];
 
+        const e = emailRef.current?.value;
+        console.log('email: ', e);
+
         try {
             const apiReq = await fetch(`${hostURL}/api/subscribe`, 
                 { 
                     method: 'post', 
                     cache: 'no-store',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ payload: { email }})
+                    body: JSON.stringify({ payload: { e }})
                 });
 
             apiRes = await apiReq.json();
@@ -136,8 +141,10 @@ const SubscribeForm = () => {
                     aria-label="email" 
                     aria-describedby="basic-addon1"
                     style={{fontSize: "2rem"}} 
-                    value={email} 
-                    onChange={handleInput} />
+                    // value={email} 
+                    // onChange={handleInput} 
+                    ref={emailRef}
+                    />
                 
                 <div className="input-group-append">
                     <button 
