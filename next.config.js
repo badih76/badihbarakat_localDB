@@ -5,11 +5,11 @@ const nextConfig = {
     serverComponentsExternalPackages: ["mysql2"]
   },
   env: {
-    host: 'containers-us-west-53.railway.app', 
-    port: 7857, 
+    host: '58.84.143.251', 
+    port: 3306, 
     user: 'root',
-    password: 'D2JeDWNtMrfj1BbO8RfQ', 
-    database: 'railway', 
+    password: 'Malmak-101', 
+    database: 'badihbarakat', 
     DEV_HOST_URL: 'http://192.168.1.12:3000',             // 'http://localhost:3000',
     PROD_HOST_URL: 'https://app-badihbarakat-info.herokuapp.com'
   }
