@@ -6,7 +6,7 @@ const nextConfig = {
   },
   env: {
     host: '58.84.143.251', 
-    port: 3306, 
+    port: '3306', 
     user: 'root',
     password: 'Malmak-101', 
     database: 'badihbarakat', 
