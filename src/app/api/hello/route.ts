@@ -41,7 +41,7 @@ export async function GET(request: Request) {
 
     // return the results as a JSON API response
     // return NextResponse.json({});
-    return NextResponse.json(results);
+    return NextResponse.json({results, connectionParams});
   } catch (err) {
       console.log('ERROR: API - ', (err as Error).message);
       
