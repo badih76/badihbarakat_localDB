@@ -5,7 +5,7 @@ import { IAPIResponse } from '@/interfaces/api.types';
 
 let connectionParams = {
     host: process.env.host,
-    port: process.env.port ? parseInt(process.env.port) : 7857,
+    port: process.env.port ? parseInt(process.env.port) : 3306,
     user: process.env.user,
     password: process.env.password,
     database: process.env.database
